@@ -191,6 +191,10 @@ NombreMadre Varchar(50),
 LugarNacimiento Varchar(50)
 );
 
+Alter table Padron
+add activo_Padron bit default 1;
+
+Select top 10 * from Padron;
 
 select top 10 *
 from [ProyectoBD2].[dbo].[Padron]
