@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtReportes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtReportes)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTitulo
@@ -51,14 +51,14 @@
             this.lbTitulo.TabIndex = 2;
             this.lbTitulo.Text = "Reportes";
             // 
-            // dataGridView1
+            // dtReportes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 288);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(847, 361);
-            this.dataGridView1.TabIndex = 3;
+            this.dtReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtReportes.Location = new System.Drawing.Point(1, 288);
+            this.dtReportes.Name = "dtReportes";
+            this.dtReportes.RowTemplate.Height = 28;
+            this.dtReportes.Size = new System.Drawing.Size(847, 361);
+            this.dtReportes.TabIndex = 3;
             // 
             // label1
             // 
@@ -144,11 +144,12 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtReportes);
             this.Controls.Add(this.lbTitulo);
             this.Name = "Reportes";
             this.Text = "Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Reportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +158,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtReportes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;

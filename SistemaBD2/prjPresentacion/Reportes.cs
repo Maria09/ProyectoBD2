@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaDeNegocios;
 
 namespace prjPresentacion
 {
@@ -15,6 +16,15 @@ namespace prjPresentacion
         public Reportes()
         {
             InitializeComponent();
+        }
+
+        private void Reportes_Load(object sender, EventArgs e) {
+            
+            DataTable oDT = new DataTable();
+            Info_Reportes oProvincia = new Info_Reportes();
+            oDT = oProvincia.Cargar_Bitacora();
+            dtReportes.DataSource = oDT;
+            
         }
     }
 }
