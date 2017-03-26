@@ -235,13 +235,20 @@ End
 
 Exec proc_ObtenerUsuarios 1;
 
+<<<<<<< HEAD
 Select * from Personas;
+=======
+
+select * from Personas
+>>>>>>> origin/master
 
 Create proc proc_DesactivarDelPadron @cedula varchar(20)
 
 As
 Begin
-	Update Padron 
-	set activo = 0 from Padron where Cedula = @cedula;
+	Update ProyectoBD2.dbo.Padron
+	set activo_Padron = 0
+	from Padron 
+	where Cedula = @cedula;
 End
 
