@@ -2,6 +2,7 @@
 
 USE [ProyectoBD2]
 GO
+
 --Agregar columna a Personas
 Alter table Personas
 	add FechaNecimiento date not null;
@@ -58,15 +59,31 @@ select * from [dbo].[Genero];
 
 --volver a insert el primer admi
 
---Primer administrador
+--Primer administrador 
+/*
+PRIMERO SE HACEN LOS INSERTS DE PROVINCIA, CANTONES Y DISTRITOS
+*/
 SELECT * FROM Administrador;
-Insert into Personas(IdTipoUsuario,IdTipoPersona,IdGenero,FechaNecimiento)values(1,1,1,'1996/09/22');
-Insert into Emails(IdTipoEmail,IdPersona,Email,activoEmail)values(1,1,'jefe1@miempresa.com',1);
-Insert into Telefonos(IdTipoTelefono,IdPersona,Telefono,activoTelefono)values(4,1,89354677,1);
-Insert into Direcciones(IdProvincia,IdCanton,IdDistrito,IdPersona,Descripcion,activoDireccion)values(1,1,1,1,'El la ciudad de San José, capital del país',1);
-Insert into Nacional(IdPersona,IdIdentificacion,Nombre,Apellido1,Apellido2)values(1,'116540936','Maria','Salas', 'Arce');
-Insert into Administrador(IdPersona,IdTipoPersona,IdTipoUsuario,IdEmail,IdTelefono,IdProvincia,IdCanton,IdDistrito,IdDireccion,usernameAdm,passwordAdm,activoAdm)values(1,1,1,1,1,1,1,1,1,'msalas','123',1);
 
+Insert into Personas(IdTipoUsuario,IdTipoPersona,IdGenero,FechaNecimiento)
+values(1,1,1,'1996/09/22');
+
+Insert into Emails(IdTipoEmail,IdPersona,Email,activoEmail)
+values(1,1,'jefe1@miempresa.com',1);
+
+Insert into Telefonos(IdTipoTelefono,IdPersona,Telefono,activoTelefono)
+values(4,1,89354677,1);
+
+Insert into Direcciones(IdProvincia,IdCanton,IdDistrito,IdPersona,Descripcion,activoDireccion)
+values(1,1,1,1,'El la ciudad de San José, capital del país',1);
+
+Insert into Nacional(IdPersona,IdIdentificacion,Nombre,Apellido1,Apellido2)
+values(1,'116540936','Maria','Salas', 'Arce');
+
+Insert into Administrador(IdPersona,IdTipoPersona,IdTipoUsuario,IdEmail,IdTelefono,IdProvincia,IdCanton,IdDistrito,IdDireccion,usernameAdm,passwordAdm,activoAdm)
+values(1,1,1,1,1,1,1,1,1,'msalas','123',1);
+
+select * from [dbo].[Direcciones]; 
 --INSERCIONES DE PROVINCIAS
 INSERT INTO Provincias (DescripcionProvincia)
 VALUES ('San Jose'),
