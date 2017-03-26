@@ -1,5 +1,8 @@
+USE ProyectoBD2
+GO
+
 --Cargar Catalogos
-Create proc proc_CargarCatalogos @nombreTabla varchar(30)
+create proc proc_CargarCatalogos @nombreTabla varchar(30)
 As
 Begin
 	if(@nombreTabla='Tipo_Personas')
@@ -59,6 +62,8 @@ End
 Go
 
 Exec proc_CargarCatalogos 'Cantones';
+
+
 
 Alter proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varchar(20),
 	@apellido1 varchar(20), @apellido2 varchar(20), @idGenero int, @fechaNacimiento date, @tipoTel int,
@@ -152,7 +157,7 @@ Begin
 				Begin
 					if(@idTipoTransac=5)
 					Begin
-						set @descripcionTransac = 'Consulta de Registrro ' +@nombreUsu;
+						set @descripcionTransac = 'Consulta de Registro ' +@nombreUsu;
 						Insert into Bitacora(IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica)values(@idTipoTransac,@idPersonaCreadora,GETDATE(),@descripcionTransac);
 					End
 				End
@@ -160,17 +165,14 @@ Begin
 		End	
 	End
 
-
-	
-
-
 End
 GO
+
 
 Select * from Bitacora;
 
 
-Create proc proc_ObtenerUsuarios @idUsuario int
+Alter proc proc_ObtenerUsuarios @idUsuario int
 
 As
 Begin
@@ -228,6 +230,7 @@ Create proc proc_DesactivarDelPadron @cedula varchar(20)
 
 As
 Begin
-	Update set activo = 0 from Padron where Cedula = @cedula;
+	Update Padron 
+	set activo = 0 from Padron where Cedula = @cedula;
 End
 
