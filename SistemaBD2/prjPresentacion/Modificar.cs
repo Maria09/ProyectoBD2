@@ -20,7 +20,10 @@ namespace prjPresentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            //Cuando cargue todo en los controles
+            //se cambia la info
+            //al dar clic en este boton, see hagan los cambio en la BD
+            //string palabra_clave = 'Modificar ususarios'
         }
 
         private void Modificar_Load(object sender, EventArgs e)
@@ -30,12 +33,12 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdU = Convert.ToInt16(cmbIdentificacion.SelectedItem);
+            int IdU = Convert.ToInt16(cmbIdentificacion.SelectedItem);//esto sirva !! datoo selecciona pasar a int
             //llenar los controles
             DataTable oDT = new DataTable();
             UsuariosDelSistema oInfo = new UsuariosDelSistema();
             oDT = oInfo.Cargar_InfoUsuario(IdU);
-            txtNombre.Text = (oDT.Rows[0]["nombre"]).ToString();
+            txtNombre.Text = (oDT.Rows[0]["nombre"]).ToString();//validar al arreglar lo anterior que se llene el txt con el nombre traido de la BD
         }
 
         private void cmbProvincia_Click(object sender, EventArgs e)
