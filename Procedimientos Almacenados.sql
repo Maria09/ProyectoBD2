@@ -253,7 +253,8 @@ Begin
 	where Cedula = @cedula;
 End
 
-ALTER proc [dbo].[proc_CargarBitacora] 
+
+Create proc [dbo].[proc_CargarBitacora] 
 As
 Begin
 	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica From Bitacora;
@@ -267,3 +268,5 @@ Begin
 	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
 	from Bitacora where IdTipoTrasaccion = @idTransac and DescripcionEspecifica = @DescripTransac;
 End
+
+
