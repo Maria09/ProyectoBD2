@@ -177,7 +177,7 @@ activoOpe bit not null
 );
 
 --Padron
-CREATE TABLE Padron (
+Create TABLE Padron (
 Cedula varchar(50),
 Folio varchar(50),
 FechaSuceso varchar(50),
@@ -192,7 +192,8 @@ LugarNacimiento Varchar(50)
 );
 
 Alter table Padron
-add activo_Padron bit default 1;
+add activo_Padron bit not null default 1;
+
 
 Select top 10 * from Padron;
 
