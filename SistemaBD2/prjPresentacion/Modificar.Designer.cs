@@ -290,7 +290,6 @@
             this.cmbIdentificacion.Size = new System.Drawing.Size(195, 28);
             this.cmbIdentificacion.TabIndex = 76;
             this.cmbIdentificacion.SelectedIndexChanged += new System.EventHandler(this.cmbIdentificacion_SelectedIndexChanged);
-            this.cmbIdentificacion.SelectedValueChanged += new System.EventHandler(this.cmbIdentificacion_SelectedValueChanged);
             this.cmbIdentificacion.Click += new System.EventHandler(this.cmbIdentificacion_Click);
             // 
             // label1
