@@ -2,11 +2,8 @@ USE ProyectoBD2
 GO
 
 --Cargar Catalogos
-<<<<<<< HEAD
-Alter proc proc_CargarCatalogos @nombreTabla varchar(30)
-=======
+
 create proc proc_CargarCatalogos @nombreTabla varchar(30)
->>>>>>> origin/master
 As
 Begin
 	if(@nombreTabla='Tipo_Personas')
@@ -236,7 +233,7 @@ Begin
 	End
 End
 
-
+Exec proc_ObtenerUsuarios 1;
 
 Create proc proc_DesactivarDelPadron @cedula varchar(20)
 
