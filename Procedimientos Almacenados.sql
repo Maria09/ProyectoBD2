@@ -3,7 +3,7 @@ GO
 
 --Cargar Catalogos
 
-create proc proc_CargarCatalogos @nombreTabla varchar(30)
+alter proc proc_CargarCatalogos @nombreTabla varchar(30)
 As
 Begin
 	if(@nombreTabla='Tipo_Personas')
@@ -58,6 +58,13 @@ Begin
 									Begin
 										Select IdPersona from Personas;
 									End
+									Else
+									Begin
+										if(@nombreTabla='Trasacciones')
+										Begin
+											Select DescripcionTipoTransaccion from TipoTransaccion;
+										End
+									End
 								End
 							End
 						End
@@ -69,7 +76,7 @@ Begin
 End
 Go
 
-Exec proc_CargarCatalogos 'Personas';
+Exec proc_CargarCatalogos 'Trasacciones';
 
 
 
