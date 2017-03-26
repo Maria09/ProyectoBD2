@@ -29,6 +29,20 @@ DescripcionTipoTel VarChar(50),
 activoTipoTelefono bit not null
 );
 
+--Tabla Genero
+CREATE TABLE Genero(
+IdGenero Int Identity(1,1) not null PRIMARY KEY,
+DescripcionGenero varchar(20) not null
+);
+
+--Tabla Personas
+CREATE TABLE Personas (
+IdPersona Int Identity(1,1) not null PRIMARY KEY,
+IdTipoUsuario Int Foreign Key References Tipo_Usuario(IdTipoUsuario),
+IdTipoPersona Int Foreign Key References Tipo_Personas(IdTipoPersona),
+IdGenero Int References Genero(IdGenero),
+);
+
 --Tabla Telefonos
 CREATE TABLE Telefonos (
 IdTelefono Int Identity(1,1) not null PRIMARY KEY,
@@ -88,21 +102,6 @@ PRIMARY KEY(IdProvincia, IdCanton, IdDistrito, IdDireccion),
 IdPersona Int Foreign Key References Personas(IdPersona),
 Descripcion VarChar(50),
 activoDireccion bit not null
-);
-
---Tabla Personas
-CREATE TABLE Personas (
-IdPersona Int Identity(1,1) not null PRIMARY KEY,
-IdTipoUsuario Int Foreign Key References Tipo_Usuario(IdTipoUsuario),
-IdTipoPersona Int Foreign Key References Tipo_Personas(IdTipoPersona),
-IdGenero Int References Genero(IdGenero),
-);
-
-
---Tabla Genero
-CREATE TABLE Genero(
-IdGenero Int Identity(1,1) not null PRIMARY KEY,
-DescripcionGenero varchar(20) not null
 );
 
 --Tabla Nacional
@@ -195,7 +194,7 @@ Alter table Padron
 add activo_Padron bit not null default 1;
 
 
-Select top 10 * from Padron;
+
 
 select top 10 *
 from [ProyectoBD2].[dbo].[Padron]
