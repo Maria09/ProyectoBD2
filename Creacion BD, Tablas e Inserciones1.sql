@@ -179,17 +179,16 @@ activoOpe bit not null
 --Padron
 CREATE TABLE Padron (
 Cedula varchar(50),
-Folio int,
-FechaSuceso date,
+Folio varchar(50),
+FechaSuceso varchar(50),
 Genero Varchar(50),
-Indicador_Defuncion bit,
+Indicador_Defuncion varchar(50),
 Apellido1 Varchar(50),
 Apellido2 Varchar(50),
 Nombre Varchar(50),
 NombrePadre Varchar(50),
 NombreMadre Varchar(50),
-LugarNacimiento Varchar(50),
-activoPadron bit default 1
+LugarNacimiento Varchar(50)
 );
 
 
