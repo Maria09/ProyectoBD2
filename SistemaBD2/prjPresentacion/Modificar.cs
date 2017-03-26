@@ -97,5 +97,15 @@ namespace prjPresentacion
             cmbCanton.DataSource = oDT;
             cmbCanton.DisplayMember = "DescripcionCanton";
         }
+
+        private void cmbIdentificacion_Click(object sender, EventArgs e) {
+            string nombre = "Personas";
+            //cargar tipo de telefono al combobox
+            DataTable oDT = new DataTable();
+            clsCatalogos oCanton = new clsCatalogos();
+            oDT = oCanton.Cargar_Cantonces(nombre);
+            cmbCanton.DataSource = oDT;
+            cmbCanton.DisplayMember = "DescripcionCanton";
+        }
     }
 }
