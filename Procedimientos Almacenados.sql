@@ -184,7 +184,7 @@ End
 GO
 
 
-Select * from Bitacora;
+Select * from Administrador;
 
 
 Alter proc proc_ObtenerUsuarios @idUsuario int

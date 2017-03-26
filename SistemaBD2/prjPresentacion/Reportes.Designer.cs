@@ -86,6 +86,7 @@
             this.cmbTipoTransac.Name = "cmbTipoTransac";
             this.cmbTipoTransac.Size = new System.Drawing.Size(283, 28);
             this.cmbTipoTransac.TabIndex = 6;
+            this.cmbTipoTransac.SelectedIndexChanged += new System.EventHandler(this.cmbTipoTransac_SelectedIndexChanged);
             this.cmbTipoTransac.Click += new System.EventHandler(this.cmbTipoTransac_Click);
             // 
             // chbSi

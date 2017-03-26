@@ -30,7 +30,7 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdU = Convert.ToUInt16(cmbIdentificacion.SelectedIndex); 
+            int IdU = Convert.ToInt16(cmbIdentificacion.SelectedItem);
             //llenar los controles
             DataTable oDT = new DataTable();
             UsuariosDelSistema oInfo = new UsuariosDelSistema();

@@ -34,11 +34,17 @@ namespace prjPresentacion
 
         private void cmbTipoTransac_Click(object sender, EventArgs e) {
             string nombre = "Trasacciones";
+            //cargar tipo de telefono al combobox
             DataTable oDT = new DataTable();
-            clsCatalogos oPersona = new clsCatalogos();
-            oDT = oPersona.Cargar_Catalogos(nombre);
+            clsCatalogos oTransac = new clsCatalogos();
+            oDT = oTransac.Cargar_Catalogos(nombre);
             cmbTipoTransac.DataSource = oDT;
             cmbTipoTransac.DisplayMember = "DescripcionTipoTransaccion";
+        }
+
+        private void cmbTipoTransac_SelectedIndexChanged(object sender, EventArgs e) {
+            chbSi.Enabled = true;
+            chbNo.Enabled = true;
         }
     }
 }
