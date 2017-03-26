@@ -235,6 +235,8 @@ End
 
 Exec proc_ObtenerUsuarios 1;
 
+Select * from Personas;
+
 Create proc proc_DesactivarDelPadron @cedula varchar(20)
 
 As

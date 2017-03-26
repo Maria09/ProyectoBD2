@@ -24,10 +24,10 @@ namespace LogicaDeNegocios
             objUsuario.Insertar_Usuario(oUsuario);
         }
 
-        public DataTable Cargar_InfoUsuario() {
+        public DataTable Cargar_InfoUsuario(int IdU) {
             CapaDatos.Usuarios_Sistema oInfo = new CapaDatos.Usuarios_Sistema();
 
-            return oInfo.Cargar_InfoUsuario();
+            return oInfo.Cargar_InfoUsuario(IdU);
         }
 
         //obtener ifo usuario

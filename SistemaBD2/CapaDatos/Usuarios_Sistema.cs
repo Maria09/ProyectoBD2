@@ -56,16 +56,15 @@ namespace CapaDatos
             
         }
 
-        public DataTable Cargar_InfoUsuario() {
+        public DataTable Cargar_InfoUsuario(int IdU) {
             DataTable oDT = new DataTable();
 
             clsConexion oC = new clsConexion();
 
             CommandType cT = CommandType.Text;
 
-            oDT = oC.EjecutarCmd(cT, "Exec proc_ObtenerUsuarios '");
-
-
+            oDT = oC.EjecutarCmd(cT, "Exec proc_ObtenerUsuarios '"+ IdU + "'");
+            
             return oDT;
 
         }

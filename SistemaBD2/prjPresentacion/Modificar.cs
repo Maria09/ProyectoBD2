@@ -30,12 +30,7 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //llenar los controles
-            //DataTable oDT = new DataTable();
-            //UsuariosDelSistema oInfo = new UsuariosDelSistema();
-            //oDT = oInfo.Cargar_InfoUsuario();
-            //cmbProvincia.DataSource = oDT;
-            //cmbProvincia.DisplayMember = "DescripcionProvincia";
+            
         }
 
         private void cmbProvincia_Click(object sender, EventArgs e)
@@ -111,6 +106,15 @@ namespace prjPresentacion
             oDT = oPersona.Cargar_Catalogos(nombre);
             cmbIdentificacion.DataSource = oDT;
             cmbIdentificacion.DisplayMember = "IdPersona";
+        }
+
+        private void cmbIdentificacion_SelectedValueChanged(object sender, EventArgs e) {
+            int IdU = cmbIdentificacion.SelectedValue;
+            //llenar los controles
+            DataTable oDT = new DataTable();
+            UsuariosDelSistema oInfo = new UsuariosDelSistema();
+            oDT = oInfo.Cargar_InfoUsuario(IdU);
+            txtNombre.Text = (oDT.Rows[0]["nombre"]).ToString();
         }
     }
 }
