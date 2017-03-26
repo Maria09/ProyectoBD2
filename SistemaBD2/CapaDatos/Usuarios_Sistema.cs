@@ -46,6 +46,10 @@ namespace CapaDatos
             oSqlC.Parameters.Add("@Distrito", SqlDbType.Int).Value = oUsuario.prop_Distrito;
             oSqlC.Parameters.Add("@exacta", SqlDbType.VarChar, 50).Value = oUsuario.prop_direccionExacta;
 
+            oSqlC.Parameters.Add("@idTipoTransac", SqlDbType.Int).Value = oUsuario.prop_idTipoTransac;
+            oSqlC.Parameters.Add("@idPersonaCreadora", SqlDbType.Int).Value = oUsuario.prop_idPersonaCreadora;
+
+
             clsConexion oConec = new clsConexion();
             oConec.EjecutarInsertar(oSqlC);
 

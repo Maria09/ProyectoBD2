@@ -138,40 +138,40 @@ namespace prjPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            DataTable oDT = new DataTable();
+            DataTable oDT;
             oDT = Principal.oDT;
 
             Usuarios oUsuario = new Usuarios();
             oUsuario.prop_apellido1 = txtApellido1.Text;
             oUsuario.prop_apellido2 = txtApellido2.Text;
-            oUsuario.prop_Canton = (cmbCanton.SelectedIndex)+1;
+            oUsuario.prop_Canton = (cmbCanton.SelectedIndex) + 1;
             if (txtPassword.Text == txtConfirmarPass.Text)
             {
                 oUsuario.prop_contraseña = txtConfirmarPass.Text;
             }
             oUsuario.prop_direccionExacta = rtExacta.Text;
-            oUsuario.prop_Distrito = (cmbDistrito.SelectedIndex)+1;
+            oUsuario.prop_Distrito = (cmbDistrito.SelectedIndex) + 1;
             oUsuario.prop_email = txtEmail.Text;
-            oUsuario.prop_tipoEmail = (cmbTipoEmail.SelectedIndex)+1;
-            if(txtEmail2.Text != null)
+            oUsuario.prop_tipoEmail = (cmbTipoEmail.SelectedIndex) + 1;
+            if (txtEmail2.Text != null)
             {
-                oUsuario.prop_tipoEmail2 = (cmbEmail2.SelectedIndex)+1;
+                oUsuario.prop_tipoEmail2 = (cmbEmail2.SelectedIndex) + 1;
                 oUsuario.prop_email2 = txtEmail2.Text;
             }
             oUsuario.prop_fechaNacimientoa = dtpFechaNacimiento.Text;
             oUsuario.prop_id = txtIdentificacion.Text;
-            oUsuario.prop_idGenero = (cmbGenero.SelectedIndex)+1;
+            oUsuario.prop_idGenero = (cmbGenero.SelectedIndex) + 1;
             oUsuario.prop_nombre = txtNombre.Text;
             oUsuario.prop_nombreUsuario = txtUser.Text;
-            oUsuario.prop_Provincia = (cmbProvincia.SelectedIndex)+1;
+            oUsuario.prop_Provincia = (cmbProvincia.SelectedIndex) + 1;
             oUsuario.prop_telefono = Convert.ToInt32(txtTelefono.Text);
             oUsuario.prop_telefono2 = Convert.ToInt32(txtTel2.Text);
-            oUsuario.prop_tipoPersona = (cmbTipoPersona.SelectedIndex)+1;
-            oUsuario.prop_tipoTelefono = (cmbTipoTelefono.SelectedIndex)+1;
-            oUsuario.prop_tipoTelefono2 = (cmbTel2.SelectedIndex)+1;
-            oUsuario.prop_tipoUsuario = (cmbTipoUsuario.SelectedIndex)+1;
+            oUsuario.prop_tipoPersona = (cmbTipoPersona.SelectedIndex) + 1;
+            oUsuario.prop_tipoTelefono = (cmbTipoTelefono.SelectedIndex) + 1;
+            oUsuario.prop_tipoTelefono2 = (cmbTel2.SelectedIndex) + 1;
+            oUsuario.prop_tipoUsuario = (cmbTipoUsuario.SelectedIndex) + 1;
 
-            oUsuario.prop_idPersonaCreadora = Convert.ToInt32(oDT);
+            oUsuario.prop_idPersonaCreadora = Convert.ToInt32(oDT.Rows[0]["idPersona"]);
             oUsuario.prop_idTipoTransac = 2;
 
             UsuariosDelSistema objUsuSist = new UsuariosDelSistema();

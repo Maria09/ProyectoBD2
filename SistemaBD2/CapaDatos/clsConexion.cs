@@ -94,5 +94,8 @@ namespace CapaDatos
             Cerrar_Conexion();
 
         }//fin del data table
+
     }
+
+   
 }

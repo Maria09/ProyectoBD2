@@ -167,7 +167,7 @@ Begin
 End
 GO
 
-Select * from Operador;
+Select * from Bitacora;
 
 
 Create proc proc_ObtenerUsuarios @idUsuario int
