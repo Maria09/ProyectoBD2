@@ -19,5 +19,18 @@ namespace CapaDatos {
             return oDT;
 
         }
+
+        public DataTable Cargar_FiltroBitacora(string desscrip) {
+            DataTable oDT = new DataTable();
+
+            clsConexion oC = new clsConexion();
+
+            CommandType cT = CommandType.Text;
+
+            oDT = oC.EjecutarCmd(cT, "Exec proc_CargarBitacora");
+
+            return oDT;
+
+        }
     }
 }

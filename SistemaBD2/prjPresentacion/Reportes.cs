@@ -21,8 +21,8 @@ namespace prjPresentacion
         private void Reportes_Load(object sender, EventArgs e) {
             
             DataTable oDT = new DataTable();
-            Info_Reportes oProvincia = new Info_Reportes();
-            oDT = oProvincia.Cargar_Bitacora();
+            Info_Reportes oReportesCompletos = new Info_Reportes();
+            oDT = oReportesCompletos.Cargar_Bitacora();
             dtReportes.DataSource = oDT;
             
             //Enable false txt
@@ -58,7 +58,13 @@ namespace prjPresentacion
         }
 
         private void btnRevisar_Click(object sender, EventArgs e) {
+            
+            string descrip = cmbTipoTransac.SelectedItem.ToString();
 
+            DataTable oDT = new DataTable();
+            Info_Reportes oProvincia = new Info_Reportes();
+            oDT = oProvincia.Cargar_FiltroBitacora(descrip);
+            dtReportes.DataSource = oDT;
         }
     }
 }

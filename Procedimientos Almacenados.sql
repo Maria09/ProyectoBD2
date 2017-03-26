@@ -243,10 +243,18 @@ End
 Exec proc_ObtenerUsuarios 1;
 
 
-Create proc proc_DesactivarDelPadron @cedula varchar(20)
+Create proc proc_DesactivarDelPadron @cedula varchar(20) --traes la palabra clave
 
 As
 Begin
+--hacer if como proc de catalogos
+	--validas la palabra
+	--modifica
+	--update en las mismas tablas del proc proc_ObtenerUsuarios
+	--else
+	--palabra = eiminar
+	--update
+	--
 	Update ProyectoBD2.dbo.Padron
 	set activo_Padron = 0
 	from Padron 
@@ -261,12 +269,12 @@ Begin
 End
 
 
-Create proc proc_FiltroBitacora @idTransac int, @DescripTransac varchar(60)
+Alter proc proc_FiltroBitacora @idTransac int, @DescripTransac varchar(60)
 
 As
 Begin
 	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
-	from Bitacora where IdTipoTrasaccion = @idTransac and DescripcionEspecifica = @DescripTransac;
+	from Bitacora where DescripcionEspecifica = @DescripTransac;
 End
 
 
