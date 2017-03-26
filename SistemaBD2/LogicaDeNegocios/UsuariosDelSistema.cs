@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Identidades;
+using System.Data;
 
 namespace LogicaDeNegocios
 {
@@ -21,6 +22,12 @@ namespace LogicaDeNegocios
             CapaDatos.Usuarios_Sistema objUsuario = new CapaDatos.Usuarios_Sistema();
 
             objUsuario.Insertar_Usuario(oUsuario);
+        }
+
+        public DataTable Cargar_InfoUsuario() {
+            CapaDatos.Usuarios_Sistema oInfo = new CapaDatos.Usuarios_Sistema();
+
+            return oInfo.Cargar_InfoUsuario();
         }
 
         //obtener ifo usuario

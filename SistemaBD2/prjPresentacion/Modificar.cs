@@ -31,6 +31,11 @@ namespace prjPresentacion
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             //llenar los controles
+            //DataTable oDT = new DataTable();
+            //UsuariosDelSistema oInfo = new UsuariosDelSistema();
+            //oDT = oInfo.Cargar_InfoUsuario();
+            //cmbProvincia.DataSource = oDT;
+            //cmbProvincia.DisplayMember = "DescripcionProvincia";
         }
 
         private void cmbProvincia_Click(object sender, EventArgs e)
@@ -39,7 +44,7 @@ namespace prjPresentacion
             //cargar tipo de telefono al combobox
             DataTable oDT = new DataTable();
             clsCatalogos oProvincia = new clsCatalogos();
-            oDT = oProvincia.Cargar_Provincias(nombre);
+            oDT = oProvincia.Cargar_Catalogos(nombre);
             cmbProvincia.DataSource = oDT;
             cmbProvincia.DisplayMember = "DescripcionProvincia";
         }
@@ -50,7 +55,7 @@ namespace prjPresentacion
             //cargar tipo de telefono al combobox
             DataTable oDT = new DataTable();
             clsCatalogos oDistrito = new clsCatalogos();
-            oDT = oDistrito.Cargar_Distritos(nombre);
+            oDT = oDistrito.Cargar_Catalogos(nombre);
             cmbDistrito.DataSource = oDT;
             cmbDistrito.DisplayMember = "DescripcionDistrito";
         }
@@ -61,7 +66,7 @@ namespace prjPresentacion
             string nombre = "Genero";
             DataTable oDT = new DataTable();
             clsCatalogos oGenero = new clsCatalogos();
-            oDT = oGenero.Cargar_Genero(nombre);
+            oDT = oGenero.Cargar_Catalogos(nombre);
             cmbGenero.DataSource = oDT;
             cmbGenero.DisplayMember = "DescripcionGenero";
         }
@@ -72,7 +77,7 @@ namespace prjPresentacion
             string nombre = "TipoTelfonos";
             DataTable oDT = new DataTable();
             clsCatalogos oTipoTelefonos = new clsCatalogos();
-            oDT = oTipoTelefonos.Cargar_TipoTelefono(nombre);
+            oDT = oTipoTelefonos.Cargar_Catalogos(nombre);
             cmbTipoTel.DataSource = oDT;
             cmbTipoTel.DisplayMember = "DescripcionTipoTel";
         }
@@ -82,7 +87,7 @@ namespace prjPresentacion
             string nombre = "TipoEmail";
             DataTable oDT = new DataTable();
             clsCatalogos oTipoEmail = new clsCatalogos();
-            oDT = oTipoEmail.Cargar_TipoEmail(nombre);
+            oDT = oTipoEmail.Cargar_Catalogos(nombre);
             cmbTipoEmail.DataSource = oDT;
             cmbTipoEmail.DisplayMember = "DescripcionTipoEmail";
         }
@@ -93,7 +98,7 @@ namespace prjPresentacion
             //cargar tipo de telefono al combobox
             DataTable oDT = new DataTable();
             clsCatalogos oCanton = new clsCatalogos();
-            oDT = oCanton.Cargar_Cantonces(nombre);
+            oDT = oCanton.Cargar_Catalogos(nombre);
             cmbCanton.DataSource = oDT;
             cmbCanton.DisplayMember = "DescripcionCanton";
         }
@@ -102,10 +107,10 @@ namespace prjPresentacion
             string nombre = "Personas";
             //cargar tipo de telefono al combobox
             DataTable oDT = new DataTable();
-            clsCatalogos oCanton = new clsCatalogos();
-            oDT = oCanton.Cargar_Cantonces(nombre);
-            cmbCanton.DataSource = oDT;
-            cmbCanton.DisplayMember = "DescripcionCanton";
+            clsCatalogos oPersona = new clsCatalogos();
+            oDT = oPersona.Cargar_Catalogos(nombre);
+            cmbIdentificacion.DataSource = oDT;
+            cmbIdentificacion.DisplayMember = "IdPersona";
         }
     }
 }

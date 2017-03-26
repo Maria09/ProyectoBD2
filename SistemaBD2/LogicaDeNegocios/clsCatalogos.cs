@@ -19,64 +19,14 @@ namespace LogicaDeNegocios
         #endregion
 
 
-        public DataTable Cargar_TipoPersonas(string nombre)
+        public DataTable Cargar_Catalogos(string nombre)
         {
 
-            CapaDatos.clsCatalogos oTipoPersona = new CapaDatos.clsCatalogos();
+            CapaDatos.clsCatalogos oCatalogo = new CapaDatos.clsCatalogos();
 
-            return oTipoPersona.Cargar_TipoPersonas(nombre);
+            return oCatalogo.Cargar_Catalogos(nombre);
         }
 
-        public DataTable Cargar_TipoTelefono(string nombre)
-        {
 
-            CapaDatos.clsCatalogos oTipoTelefono = new CapaDatos.clsCatalogos();
-
-            return oTipoTelefono.Cargar_TipoTelefonos(nombre);
-        }
-
-        public DataTable Cargar_TipoEmail(string nombre)
-        {
-
-            CapaDatos.clsCatalogos oTipoEmail = new CapaDatos.clsCatalogos();
-
-            return oTipoEmail.Cargar_TipoEmail(nombre);
-        }
-
-        public DataTable Cargar_TipoUsuario(string nombre)
-        {
-
-            CapaDatos.clsCatalogos oTipoUsuario = new CapaDatos.clsCatalogos();
-
-            return oTipoUsuario.Cargar_TipoUsuario(nombre);
-        }
-
-        public DataTable Cargar_Genero(string nombre)
-        {
-            CapaDatos.clsCatalogos oGenero = new CapaDatos.clsCatalogos();
-
-            return oGenero.Cargar_Genero(nombre);
-        }
-
-        public DataTable Cargar_Provincias(string nombre)
-        {
-            CapaDatos.clsCatalogos oProvincia = new CapaDatos.clsCatalogos();
-
-            return oProvincia.Cargar_Provincias(nombre);
-        }
-
-        public DataTable Cargar_Cantonces(string nombre)
-        {
-            CapaDatos.clsCatalogos oCanton = new CapaDatos.clsCatalogos();
-
-            return oCanton.Cargar_Cantones(nombre);
-        }
-
-        public DataTable Cargar_Distritos(string nombre)
-        {
-            CapaDatos.clsCatalogos oDistrito = new CapaDatos.clsCatalogos();
-
-            return oDistrito.Cargar_Distritos(nombre);
-        }
     }
 }

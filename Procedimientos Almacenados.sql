@@ -1,5 +1,5 @@
 --Cargar Catalogos
-Create proc proc_CargarCatalogos @nombreTabla varchar(30)
+Alter proc proc_CargarCatalogos @nombreTabla varchar(30)
 As
 Begin
 	if(@nombreTabla='Tipo_Personas')
@@ -48,6 +48,13 @@ Begin
 								Begin
 									Select DescripcionDistrito from Distritos
 								End
+								Else
+								Begin
+									if(@nombreTabla='Personas')
+									Begin
+										Select IdPersona from Personas;
+									End
+								End
 							End
 						End
 					End
@@ -58,7 +65,7 @@ Begin
 End
 Go
 
-Exec proc_CargarCatalogos 'Cantones';
+Exec proc_CargarCatalogos 'Personas';
 
 Alter proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varchar(20),
 	@apellido1 varchar(20), @apellido2 varchar(20), @idGenero int, @fechaNacimiento date, @tipoTel int,
@@ -152,17 +159,13 @@ Begin
 				Begin
 					if(@idTipoTransac=5)
 					Begin
-						set @descripcionTransac = 'Consulta de Registrro ' +@nombreUsu;
+						set @descripcionTransac = 'Consulta de Registro ' +@nombreUsu;
 						Insert into Bitacora(IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica)values(@idTipoTransac,@idPersonaCreadora,GETDATE(),@descripcionTransac);
 					End
 				End
 			End
 		End	
 	End
-
-
-	
-
 
 End
 GO
@@ -188,13 +191,13 @@ Begin
 		set @admiOpe = (Select IdTipoUsuario from Personas where IdPersona = @idUsuario);
 		if(@admiOpe=1)
 		Begin
-			Select usernameAdm,passwordAdm from Administrador where IdPersona = @idUsuario;
+			Select usernameAdm,passwordAdm,activoAdm from Administrador where IdPersona = @idUsuario;
 		End
 		Else
 		Begin
 			if(@admiOpe=2)
 			Begin
-				Select usernameOpe,passwordOpe from Operador where IdPersona = @idUsuario;
+				Select usernameOpe,passwordOpe,activoOpe from Operador where IdPersona = @idUsuario;
 			End
 		End
 	End
@@ -210,18 +213,19 @@ Begin
 			set @admiOpe = (Select IdTipoUsuario from Personas where IdPersona = @idUsuario);
 			if(@admiOpe=1)
 			Begin
-				Select usernameAdm,passwordAdm from Administrador where IdPersona = @idUsuario;
+				Select usernameAdm,passwordAdm,activoAdm from Administrador where IdPersona = @idUsuario;
 			End
 			Else
 			Begin
 				if(@admiOpe=2)
 				Begin
-					Select usernameOpe,passwordOpe from Operador where IdPersona = @idUsuario;
+					Select usernameOpe,passwordOpe,activoOpe from Operador where IdPersona = @idUsuario;
 				End
 			End
 		End
 	End
 End
+
 
 
 Create proc proc_DesactivarDelPadron @cedula varchar(20)

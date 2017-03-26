@@ -53,11 +53,21 @@ namespace CapaDatos
             clsConexion oConec = new clsConexion();
             oConec.EjecutarInsertar(oSqlC);
 
-            //List<String> oList = new clsConexion().EjecutarCmd(oSqlC);
+            
+        }
 
-            //clsConexion oC = new clsConexion();
-            //CommandType cT = CommandType.StoredProcedure;
-            //oC.EjecutarCmd(cT, "Exec proc_InsertarUsuarios '" + oUsuario + "'");
+        public DataTable Cargar_InfoUsuario() {
+            DataTable oDT = new DataTable();
+
+            clsConexion oC = new clsConexion();
+
+            CommandType cT = CommandType.Text;
+
+            oDT = oC.EjecutarCmd(cT, "Exec proc_ObtenerUsuarios '");
+
+
+            return oDT;
+
         }
 
     }
