@@ -235,12 +235,10 @@ End
 
 Exec proc_ObtenerUsuarios 1;
 
-<<<<<<< HEAD
-Select * from Personas;
-=======
 
-select * from Personas
->>>>>>> origin/master
+
+select top 10 * from Padron
+select * from Bitacora;
 
 Create proc proc_DesactivarDelPadron @cedula varchar(20)
 
@@ -252,3 +250,10 @@ Begin
 	where Cedula = @cedula;
 End
 
+Create proc proc_CargarBitacora 
+As
+Begin
+	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica From Bitacora;
+End
+
+Exec proc_CargarBitacora;

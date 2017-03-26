@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="clsCatalogos.cs" />
     <Compile Include="clsInicioSesion.cs" />
+    <Compile Include="Info_Reportes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosDelSistema.cs" />
   </ItemGroup>
