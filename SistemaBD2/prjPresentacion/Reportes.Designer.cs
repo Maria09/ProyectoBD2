@@ -98,6 +98,7 @@
             this.chbSi.TabIndex = 7;
             this.chbSi.Text = "Si";
             this.chbSi.UseVisualStyleBackColor = true;
+            this.chbSi.CheckedChanged += new System.EventHandler(this.chbSi_CheckedChanged);
             // 
             // chbNo
             // 
@@ -108,6 +109,7 @@
             this.chbNo.TabIndex = 8;
             this.chbNo.Text = "No";
             this.chbNo.UseVisualStyleBackColor = true;
+            this.chbNo.CheckedChanged += new System.EventHandler(this.chbNo_CheckedChanged);
             // 
             // label3
             // 
@@ -133,6 +135,7 @@
             this.btnRevisar.TabIndex = 11;
             this.btnRevisar.Text = "Revisar";
             this.btnRevisar.UseVisualStyleBackColor = true;
+            this.btnRevisar.Click += new System.EventHandler(this.btnRevisar_Click);
             // 
             // Reportes
             // 

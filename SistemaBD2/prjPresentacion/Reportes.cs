@@ -46,5 +46,19 @@ namespace prjPresentacion
             chbSi.Enabled = true;
             chbNo.Enabled = true;
         }
+
+        private void chbSi_CheckedChanged(object sender, EventArgs e) {
+            txtIdUsuEsp.Enabled = true;
+            btnRevisar.Enabled = true;
+        }
+
+        private void chbNo_CheckedChanged(object sender, EventArgs e) {
+            txtIdUsuEsp.Enabled = true;
+            btnRevisar.Enabled = true;
+        }
+
+        private void btnRevisar_Click(object sender, EventArgs e) {
+
+        }
     }
 }

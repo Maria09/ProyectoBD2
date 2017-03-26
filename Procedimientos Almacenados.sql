@@ -253,3 +253,17 @@ Begin
 	where Cedula = @cedula;
 End
 
+ALTER proc [dbo].[proc_CargarBitacora] 
+As
+Begin
+	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica From Bitacora;
+End
+
+
+Create proc proc_FiltroBitacora @idTransac int, @DescripTransac varchar(60)
+
+As
+Begin
+	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
+	from Bitacora where IdTipoTrasaccion = @idTransac and DescripcionEspecifica = @DescripTransac;
+End
