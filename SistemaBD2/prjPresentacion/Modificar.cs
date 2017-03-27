@@ -33,7 +33,7 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdU = Convert.ToInt16(cmbIdentificacion.SelectedItem);//esto sirva !! datoo selecciona pasar a int
+            int IdU = Convert.ToInt32(cmbIdentificacion.SelectedItem);//esto sirva !! dato selecciona pasar a int
             //llenar los controles
             DataTable oDT = new DataTable();
             UsuariosDelSistema oInfo = new UsuariosDelSistema();
@@ -114,6 +114,11 @@ namespace prjPresentacion
             oDT = oPersona.Cargar_Catalogos(nombre);
             cmbIdentificacion.DataSource = oDT;
             cmbIdentificacion.DisplayMember = "IdPersona";
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

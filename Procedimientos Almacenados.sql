@@ -3,7 +3,7 @@ GO
 
 --Cargar Catalogos
 
-alter proc proc_CargarCatalogos @nombreTabla varchar(30)
+Create proc proc_CargarCatalogos @nombreTabla varchar(30)
 As
 Begin
 	if(@nombreTabla='Tipo_Personas')
@@ -78,7 +78,7 @@ Go
 
 Exec proc_CargarCatalogos 'Trasacciones';
 
-Alter proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varchar(20),
+Create proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varchar(20),
 	@apellido1 varchar(20), @apellido2 varchar(20), @idGenero int, @fechaNacimiento date, @tipoTel int,
 	@telefono int, @tipoEmail int, @email varchar(30), @tipoTel2 int, @tel2 int, @tipoEmail2 int, 
 	@email2 varchar(30), @tipoUsuario int, @nombreUsu varchar(20),@contrasenya varchar(20), @Provincia int, 
@@ -186,7 +186,7 @@ GO
 Select * from Bitacora;
 
 
-Alter proc proc_ObtenerUsuarios @idUsuario int
+Create proc proc_ObtenerUsuarios @idUsuario int
 
 As
 Begin
@@ -268,7 +268,7 @@ Begin
 End
 
 
-Alter proc proc_FiltroBitacora @DescripTransac varchar(60), @idPer int
+Create proc proc_FiltroBitacora @DescripTransac varchar(60), @idPer int
 
 As
 Begin
@@ -288,8 +288,3 @@ Begin
 	End
 
 End
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
