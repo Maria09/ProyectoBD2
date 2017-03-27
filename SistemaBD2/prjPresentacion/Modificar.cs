@@ -18,7 +18,7 @@ namespace prjPresentacion
             InitializeComponent();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             //Cuando cargue todo en los controles
             //se cambia la info
@@ -33,7 +33,7 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdU = Convert.ToInt16(cmbIdentificacion.SelectedItem);//esto sirva !! datoo selecciona pasar a int
+            int IdU = Convert.ToInt32(cmbIdentificacion.SelectedItem);//esto sirva !! datoo selecciona pasar a int
             //llenar los controles
             DataTable oDT = new DataTable();
             UsuariosDelSistema oInfo = new UsuariosDelSistema();
