@@ -11,7 +11,11 @@ namespace CapaDatos
 {
     class clsConexion
     {
+<<<<<<< HEAD
         private SqlConnection oCN = new SqlConnection("Data Source=DESKTOP-EE4SB8V\\SQLSERVER2017;Initial Catalog=ProyectoBD2;Integrated Security=True");
+=======
+        private SqlConnection oCN = new SqlConnection("Data Source=BRYAN_AGB\\MSSQL2016;Initial Catalog=ProyectoBD2;Integrated Security=True");
+>>>>>>> origin/master
 
 
         public bool Abrir_Conexion()

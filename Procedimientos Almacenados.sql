@@ -242,7 +242,7 @@ End
 Exec proc_ObtenerUsuarios 1;
 
 
-Create proc proc_DesactivarDelPadron @cedula varchar(20) --traes la palabra clave
+alter proc proc_DesactivarDelPadron @cedula varchar(20) --traes la palabra clave
 
 As
 Begin
