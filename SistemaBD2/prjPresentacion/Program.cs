@@ -16,7 +16,7 @@ namespace prjPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Modificar());
+            Application.Run(new Principal());
         }
     }
 }

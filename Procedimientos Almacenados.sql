@@ -186,7 +186,29 @@ GO
 Select * from Bitacora;
 
 
-Create proc proc_ObtenerUsuarios @idUsuario int
+create proc proc_ModificarUsuarios @idUsuario int
+
+as
+begin
+Select IdGenero From Personas where IdPersona = @idUsuario;
+	Declare @tipo int = (Select IdTipoPersona from Personas where IdPersona = @idUsuario);
+	Declare @admiOpe int;
+
+	if(@tipo=1)
+	Begin 
+		select N.Nombre, N.Apellido1, N.Apellido2, T.Telefono, T.IdTipoTelefono, E.Email, E.IdTipoEmail, D.IdProvincia, D.IdCanton, D.IdDistrito, D.Descripcion
+		from Nacional N, Telefonos T, Emails E, Direcciones D 
+		join dbo.
+		where 
+		set @admiOpe = (Select IdTipoUsuario from Personas where IdPersona = @idUsuario);
+
+/*seguir con los joins para que sirva la tabla modificar en la aplicacion,
+hacerla guiandose con el procedimiento de obtenerUsuarios o la hace en esa. 
+'*/
+
+
+
+Alter proc proc_ObtenerUsuarios @idUsuario int
 
 As
 Begin
@@ -239,7 +261,7 @@ Begin
 	End
 End
 
-Exec proc_ObtenerUsuarios 1;
+Exec proc_ObtenerUsuarios 2;
 
 
 alter proc proc_DesactivarDelPadron @cedula varchar(20) --traes la palabra clave

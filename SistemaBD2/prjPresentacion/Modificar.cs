@@ -23,14 +23,7 @@ namespace prjPresentacion {
         }
 
         private void Modificar_Load(object sender, EventArgs e) {
-            string nombre = "Personas";
-            //cargar tipo de telefono al combobox
-            DataTable oDT = new DataTable();
-            clsCatalogos oPersona = new clsCatalogos();
-            oDT = oPersona.Cargar_Catalogos(nombre);
-            cmbIdentificacion.DataSource = oDT;
-            cmbIdentificacion.DisplayMember = "IdPersona";
-            cmbIdentificacion.ValueMember = "IdPersona";
+
         }
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e) {
@@ -113,7 +106,14 @@ namespace prjPresentacion {
         }
 
         private void cmbIdentificacion_Click(object sender, EventArgs e) {
-
+            string nombre = "Personas";
+            //cargar tipo de telefono al combobox
+            DataTable oDT = new DataTable();
+            clsCatalogos oPersona = new clsCatalogos();
+            oDT = oPersona.Cargar_Catalogos(nombre);
+            cmbIdentificacion.DataSource = oDT;
+            cmbIdentificacion.DisplayMember = "IdPersona";
+            cmbIdentificacion.ValueMember = "IdPersona";
         }
 
         private void tabPage1_Click(object sender, EventArgs e) {
@@ -123,7 +123,8 @@ namespace prjPresentacion {
         private void cmbIdentificacion_Leave(object sender, EventArgs e) {
             if(cmbIdentificacion.SelectedValue != null) {
                 DataTable oDT = new LogicaDeNegocios.UsuariosDelSistema().Cargar_InfoUsuario(Convert.ToInt32(cmbIdentificacion.SelectedValue));
-                txtApellido1.Text = Convert.ToString(oDT.Rows[0][0]);
+                txtNombre.Text = Convert.ToString(oDT.Rows[0][0]);
+                //txtApellido1.Text = Convert.ToString(oDT.Rows[0][0]);
             } else {
                 MessageBox.Show("Seleccione una cedula valida");
             }
