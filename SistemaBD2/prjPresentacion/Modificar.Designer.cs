@@ -115,9 +115,9 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.lbTitulo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(664, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Modificar Usuarios";
@@ -129,7 +129,7 @@
             this.cmbDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDistrito.FormattingEnabled = true;
             this.cmbDistrito.Location = new System.Drawing.Point(447, 146);
-            this.cmbDistrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDistrito.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDistrito.Name = "cmbDistrito";
             this.cmbDistrito.Size = new System.Drawing.Size(131, 21);
             this.cmbDistrito.TabIndex = 87;
@@ -140,7 +140,7 @@
             this.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCanton.FormattingEnabled = true;
             this.cmbCanton.Location = new System.Drawing.Point(447, 110);
-            this.cmbCanton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCanton.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCanton.Name = "cmbCanton";
             this.cmbCanton.Size = new System.Drawing.Size(131, 21);
             this.cmbCanton.TabIndex = 86;
@@ -151,7 +151,7 @@
             this.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProvincia.FormattingEnabled = true;
             this.cmbProvincia.Location = new System.Drawing.Point(447, 79);
-            this.cmbProvincia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProvincia.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(131, 21);
             this.cmbProvincia.TabIndex = 85;
@@ -160,7 +160,7 @@
             // rtExacta
             // 
             this.rtExacta.Location = new System.Drawing.Point(447, 177);
-            this.rtExacta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtExacta.Margin = new System.Windows.Forms.Padding(2);
             this.rtExacta.Name = "rtExacta";
             this.rtExacta.Size = new System.Drawing.Size(182, 83);
             this.rtExacta.TabIndex = 84;
@@ -169,7 +169,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(140, 368);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(131, 20);
             this.txtEmail.TabIndex = 73;
@@ -177,7 +177,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(139, 265);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(131, 20);
             this.txtTelefono.TabIndex = 68;
@@ -185,7 +185,7 @@
             // txtPassConfirm
             // 
             this.txtPassConfirm.Location = new System.Drawing.Point(447, 346);
-            this.txtPassConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassConfirm.Name = "txtPassConfirm";
             this.txtPassConfirm.Size = new System.Drawing.Size(131, 20);
             this.txtPassConfirm.TabIndex = 62;
@@ -193,7 +193,7 @@
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(447, 309);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(131, 20);
             this.txtPass.TabIndex = 61;
@@ -201,7 +201,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(447, 269);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(131, 20);
             this.txtUser.TabIndex = 60;
@@ -209,7 +209,7 @@
             // txtApellido2
             // 
             this.txtApellido2.Location = new System.Drawing.Point(139, 196);
-            this.txtApellido2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido2.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Size = new System.Drawing.Size(131, 20);
             this.txtApellido2.TabIndex = 59;
@@ -217,7 +217,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(139, 118);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(131, 20);
             this.txtNombre.TabIndex = 58;
@@ -225,7 +225,7 @@
             // txtApellido1
             // 
             this.txtApellido1.Location = new System.Drawing.Point(139, 157);
-            this.txtApellido1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido1.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Size = new System.Drawing.Size(131, 20);
             this.txtApellido1.TabIndex = 57;
@@ -274,7 +274,7 @@
             // 
             this.chbNo.AutoSize = true;
             this.chbNo.Location = new System.Drawing.Point(189, 331);
-            this.chbNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbNo.Margin = new System.Windows.Forms.Padding(2);
             this.chbNo.Name = "chbNo";
             this.chbNo.Size = new System.Drawing.Size(40, 17);
             this.chbNo.TabIndex = 79;
@@ -285,7 +285,7 @@
             // 
             this.chbSi.AutoSize = true;
             this.chbSi.Location = new System.Drawing.Point(139, 333);
-            this.chbSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbSi.Margin = new System.Windows.Forms.Padding(2);
             this.chbSi.Name = "chbSi";
             this.chbSi.Size = new System.Drawing.Size(35, 17);
             this.chbSi.TabIndex = 78;
@@ -307,12 +307,13 @@
             this.cmbIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdentificacion.FormattingEnabled = true;
             this.cmbIdentificacion.Location = new System.Drawing.Point(139, 84);
-            this.cmbIdentificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdentificacion.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdentificacion.Name = "cmbIdentificacion";
             this.cmbIdentificacion.Size = new System.Drawing.Size(131, 21);
             this.cmbIdentificacion.TabIndex = 76;
             this.cmbIdentificacion.SelectedIndexChanged += new System.EventHandler(this.cmbIdentificacion_SelectedIndexChanged);
             this.cmbIdentificacion.Click += new System.EventHandler(this.cmbIdentificacion_Click);
+            this.cmbIdentificacion.Leave += new System.EventHandler(this.cmbIdentificacion_Leave);
             // 
             // label1
             // 
@@ -329,7 +330,7 @@
             this.cmbTipoEmail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoEmail.FormattingEnabled = true;
             this.cmbTipoEmail.Location = new System.Drawing.Point(140, 396);
-            this.cmbTipoEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoEmail.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoEmail.Name = "cmbTipoEmail";
             this.cmbTipoEmail.Size = new System.Drawing.Size(131, 21);
             this.cmbTipoEmail.TabIndex = 74;
@@ -370,7 +371,7 @@
             this.cmbTipoTel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoTel.FormattingEnabled = true;
             this.cmbTipoTel.Location = new System.Drawing.Point(139, 302);
-            this.cmbTipoTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoTel.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoTel.Name = "cmbTipoTel";
             this.cmbTipoTel.Size = new System.Drawing.Size(131, 21);
             this.cmbTipoTel.TabIndex = 69;
@@ -409,7 +410,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(389, 392);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(131, 27);
             this.btnRegistrar.TabIndex = 64;
@@ -452,7 +453,7 @@
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(139, 227);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(131, 21);
             this.cmbGenero.TabIndex = 49;
@@ -513,7 +514,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(672, 469);
@@ -525,7 +526,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 468);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Modificar";
             this.Text = "Modificar";
             this.Load += new System.EventHandler(this.Modificar_Load);
