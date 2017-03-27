@@ -18,7 +18,7 @@ namespace prjPresentacion
             InitializeComponent();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             //Cuando cargue todo en los controles
             //se cambia la info
@@ -33,16 +33,17 @@ namespace prjPresentacion
 
         private void cmbIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            int IdU = Convert.ToInt32(cmbIdentificacion.SelectedItem);//esto sirva !! dato selecciona pasar a int
-=======
-            int IdU = Convert.ToInt32(cmbIdentificacion.SelectedItem);//esto sirva !! datoo selecciona pasar a int
->>>>>>> origin/master
-            //llenar los controles
-            DataTable oDT = new DataTable();
-            UsuariosDelSistema oInfo = new UsuariosDelSistema();
-            oDT = oInfo.Cargar_InfoUsuario(IdU);
-            txtNombre.Text = (oDT.Rows[0]["nombre"]).ToString();//validar al arreglar lo anterior que se llene el txt con el nombre traido de la BD
+            try {
+                int IdU = Convert.ToInt32(cmbIdentificacion.SelectedItem);//esto sirva !! dato selecciona pasar a int
+                                                                          //llenar los controles
+                DataTable oDT = new DataTable();
+                UsuariosDelSistema oInfo = new UsuariosDelSistema();
+                oDT = oInfo.Cargar_InfoUsuario(IdU);
+                txtNombre.Text = (oDT.Rows[0]["nombre"]).ToString();//validar al arreglar lo anterior que se llene el txt con el nombre traido de la BD
+            }
+            catch (Exception) { }
+
+            
         }
 
         private void cmbProvincia_Click(object sender, EventArgs e)
