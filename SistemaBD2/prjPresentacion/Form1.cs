@@ -32,11 +32,16 @@ namespace prjPresentacion
 
             if (tipoAdmi == 2)
             {
+                
                 oDT = oAdmi.Cargar_Administrador(txtUsername.Text, txtPassword.Text);
+                
                 if (oDT != null)
                 {
                     MessageBox.Show("Bienvenido Administrador");
                     Principal.oDT = oDT;
+                    int creador = Convert.ToInt32(oDT.Rows[0]["idPersona"]);
+                    int transac = 1;
+                    oAdmi.InsertarEnBitacora(creador, transac);
                     foreach (ToolStripMenuItem item in oMenus)
                     {
                         item.Enabled = true;
@@ -48,11 +53,16 @@ namespace prjPresentacion
             {
                 if (tipoAdmi == 1)
                 {
+                    
                     oDT = oAdmi.Cargar_Operador(txtUsername.Text, txtPassword.Text);
+                    
                     if (oDT != null)
                     {
                         MessageBox.Show("Bienvenido Operador");
                         Principal.oDT = oDT;
+                        int creador = Convert.ToInt32(oDT.Rows[0]["idPersona"]);
+                        int transac = 1;
+                        oAdmi.InsertarEnBitacora(creador, transac);
                         oMenus[1].Enabled = true;
                         oMenus[2].Enabled = true;
                         this.Dispose();

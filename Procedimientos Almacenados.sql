@@ -78,8 +78,6 @@ Go
 
 Exec proc_CargarCatalogos 'Trasacciones';
 
-
-
 Alter proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varchar(20),
 	@apellido1 varchar(20), @apellido2 varchar(20), @idGenero int, @fechaNacimiento date, @tipoTel int,
 	@telefono int, @tipoEmail int, @email varchar(30), @tipoTel2 int, @tel2 int, @tipoEmail2 int, 
@@ -87,6 +85,7 @@ Alter proc proc_InsertarUsuarios @TipoPersona int, @id varchar(20), @nombre varc
 	@Canton int, @Distrito int, @exacta varchar(50),
 
 	@idTipoTransac int, @idPersonaCreadora int
+	
 
 As
 Begin
@@ -172,7 +171,7 @@ Begin
 				Begin
 					if(@idTipoTransac=5)
 					Begin
-						set @descripcionTransac = 'Consulta de Registro ' +@nombreUsu;
+						set @descripcionTransac = 'Consulta de Registro ';
 						Insert into Bitacora(IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica)values(@idTipoTransac,@idPersonaCreadora,GETDATE(),@descripcionTransac);
 					End
 				End
@@ -184,7 +183,7 @@ End
 GO
 
 
-Select * from Administrador;
+Select * from Bitacora;
 
 
 Alter proc proc_ObtenerUsuarios @idUsuario int
@@ -268,10 +267,24 @@ Begin
 End
 
 
-Alter proc proc_FiltroBitacora @idTransac int, @DescripTransac varchar(60)
+Alter proc proc_FiltroBitacora @DescripTransac varchar(60), @idPer int
 
 As
 Begin
-	Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
-	from Bitacora where DescripcionEspecifica = @DescripTransac;
+	if(@idPer>0)
+	Begin
+		Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
+		from Bitacora where DescripcionEspecifica = @DescripTransac and IdPersona = @idPer;
+	End
+	Else
+	Begin
+		if(@idPer=0)
+		Begin
+			Select IdBitacora,IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica 
+			from Bitacora where DescripcionEspecifica = @DescripTransac;
+		End
+		
+	End
+
 End
+

@@ -30,6 +30,7 @@ namespace LogicaDeNegocios
             return oInfo.Cargar_InfoUsuario(IdU);
         }
 
+        
         //obtener ifo usuario
     }
 }

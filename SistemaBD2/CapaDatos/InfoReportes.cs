@@ -20,14 +20,14 @@ namespace CapaDatos {
 
         }
 
-        public DataTable Cargar_FiltroBitacora(string desscrip) {
+        public DataTable Cargar_FiltroBitacora(string desscrip, int idP) {
             DataTable oDT = new DataTable();
 
             clsConexion oC = new clsConexion();
 
             CommandType cT = CommandType.Text;
 
-            oDT = oC.EjecutarCmd(cT, "Exec proc_CargarBitacora");
+            oDT = oC.EjecutarCmd(cT, "Exec proc_CargarBitacora '"+ desscrip + "', "+idP+"");
 
             return oDT;
 

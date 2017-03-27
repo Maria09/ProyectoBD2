@@ -177,6 +177,28 @@ namespace prjPresentacion
             UsuariosDelSistema objUsuSist = new UsuariosDelSistema();
             objUsuSist.Insertar_Usuario(oUsuario);
 
+            cmbCanton.Text = "";
+            cmbDistrito.Text = "";
+            cmbEmail2.Text = "";
+            cmbGenero.Text = "";
+            cmbProvincia.Text = "";
+            cmbTel2.Text = "";
+            cmbTipoEmail.Text = "";
+            cmbTipoPersona.Text = "";
+            cmbTipoTelefono.Text = "";
+            cmbTipoUsuario.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
+            txtConfirmarPass.Text = "";
+            txtEmail.Text = "";
+            txtEmail2.Text = "";
+            txtIdentificacion.Text = "";
+            txtNombre.Text = "";
+            txtPassword.Text = "";
+            txtTel2.Text = "";
+            txtTelefono.Text = "";
+            txtUser.Text = "";
+            rtExacta.Text = "";
         }
         
     }

@@ -41,6 +41,15 @@ namespace CapaDatos
             return oDT;
 
         }
+        //InsertarEnBitacora
+        public void InsertarEnBitacora(int creador, int transac) {
+            
+            clsConexion oC = new clsConexion();
+            
+
+            oC.InsertarProductos(creador,transac);
+            
+        }
     }
 }
 

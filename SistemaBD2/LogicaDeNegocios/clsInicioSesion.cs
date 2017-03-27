@@ -41,7 +41,18 @@ namespace LogicaDeNegocios
 
             return oAdmi.Cargar_Operador(nombreUsuOpe, contrasOpe);
         }
+
+        public void InsertarEnBitacora(int creador, int transac) {
+
+            CapaDatos.clsInicioSesion oAdmi = new CapaDatos.clsInicioSesion();
+
+            oAdmi.InsertarEnBitacora(creador, transac);
+        }
         #endregion
+
+
+
+
 
         #region Propiedades
         public int AtrUsername { get; set; }

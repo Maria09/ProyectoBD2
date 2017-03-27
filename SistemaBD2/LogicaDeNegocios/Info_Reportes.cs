@@ -14,10 +14,10 @@ namespace LogicaDeNegocios {
             return oBitacora.Cargar_Bitacora();
         }
 
-        public DataTable Cargar_FiltroBitacora(string desscrip) {
+        public DataTable Cargar_FiltroBitacora(string desscrip, int idP) {
             CapaDatos.InfoReportes oBitacora = new CapaDatos.InfoReportes();
 
-            return oBitacora.Cargar_FiltroBitacora(desscrip);
+            return oBitacora.Cargar_FiltroBitacora(desscrip,idP);
         }
 
     }

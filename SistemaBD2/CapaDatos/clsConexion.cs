@@ -95,7 +95,20 @@ namespace CapaDatos
 
         }//fin del data table
 
+        public void InsertarProductos(int creador, int transac) {
+            SqlCommand oComando = new SqlCommand();
+            oComando.CommandType = System.Data.CommandType.Text;
+            oComando.Connection = oCN;
+            oComando.CommandText = "Insert into Bitacora(IdTipoTrasaccion,IdPersona,Fecha,DescripcionEspecifica)values(" + transac + "," + creador + ",GETDATE(),'Inicio de Sesion')";
+            oComando.CommandTimeout = 0;
+            Abrir_Conexion();
+            oComando.ExecuteNonQuery();
+            Cerrar_Conexion();
+            oComando.Dispose();
+        }
     }
 
-   
+    
+
+
 }

@@ -53,18 +53,19 @@ namespace prjPresentacion
         }
 
         private void chbNo_CheckedChanged(object sender, EventArgs e) {
-            txtIdUsuEsp.Enabled = true;
             btnRevisar.Enabled = true;
         }
 
         private void btnRevisar_Click(object sender, EventArgs e) {
             
             string descrip = cmbTipoTransac.SelectedItem.ToString();
-
+            int idP = Convert.ToInt16(txtIdUsuEsp.Text);
+            
             DataTable oDT = new DataTable();
-            Info_Reportes oProvincia = new Info_Reportes();
-            oDT = oProvincia.Cargar_FiltroBitacora(descrip);
+            Info_Reportes oInfo = new Info_Reportes();
+            oDT = oInfo.Cargar_FiltroBitacora(descrip,idP);
             dtReportes.DataSource = oDT;
+            
         }
     }
 }
